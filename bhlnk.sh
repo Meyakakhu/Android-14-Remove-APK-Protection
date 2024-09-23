@@ -111,7 +111,7 @@ repM () {
 framework() {
 
 	jar_util d 'framework.jar' fw 5 5
-
+	echo $(ls)
 	count=$(ls -dq classes* | wc -l)
 	mkdir "classes$count.dex.out"
 
@@ -125,7 +125,8 @@ framework() {
 services() {
 	
 	jar_util d "services.jar" fw
-
+ 
+	echo $(ls)
 	count=$(ls -dq classes* | wc -l)
 	mkdir "classes$count.dex.out" 
 
